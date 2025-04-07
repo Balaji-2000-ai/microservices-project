@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t katukutibalaji/frontendservice:v1 .'
+                sh 'docker build -t katukutibalaji/frontend:v1 .'
             }
         }
         stage ('Push') {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub-cred') {
-                         sh 'docker push katukutibalaji/frontendservice:v1'
+                         sh 'docker push katukutibalaji/frontend:v1'
                     }
                 }
             }
