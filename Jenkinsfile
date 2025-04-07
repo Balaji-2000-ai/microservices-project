@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t katukutibalaji/cartservice:v1 .'
+                sh 'docker build -t katukutibalaji/cartservice:v1 src'
             }
         }
         stage ('Push') {
