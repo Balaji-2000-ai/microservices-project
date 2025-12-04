@@ -10,7 +10,7 @@ pipeline {
         stage ('Push') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'dockerhub-cred') {
+                    withDockerRegistry(credentialsId: 'DockerHub-ID') {
                          sh 'docker push katukutibalaji/loadgenerator:v1'
                     }
                 }
